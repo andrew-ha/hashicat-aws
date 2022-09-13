@@ -1,5 +1,6 @@
 module "s3_bucket" {
-  source = "andrew-ha/terraform-aws-s3-bucket"
+  source  = "app.terraform.io/andrew-ha-org/s3-bucket/aws"
+  version = "2.8.0"
 
   bucket_prefix = "andrew"
   bucket = "my-s3-bucket"
@@ -8,5 +9,4 @@ module "s3_bucket" {
   versioning = {
     enabled = true
   }
-
 }
